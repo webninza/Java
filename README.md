@@ -1,3 +1,3 @@
 # Java
 Common Java Programs
-[Test] (test.java)
+[Test](test.java)
