@@ -1,1 +1,1 @@
-[Java Architecture](javaArch.md)
+[Java Architecture](Basics/javaArch.md)
