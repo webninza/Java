@@ -23,25 +23,25 @@ These steps together describle the whole JVM. (https://en.wikipedia.org/wiki/Jav
   > - Extension Class Loader : It loads classes present in extension directories JAVA_HOME/jre/lib/ext (extension path). implemented in java by the sun.misc.Launcher$ExtClassLoader class.
   > - System/Application class loader : Loads classes from application class path implemented in Java by the sun.misc.Launcher$AppClassLoader class.
   
-  >**Class Loader:**
+>**Memory Area:**
   
-    **1. Method Area:** Class level information like class name, immediate parent class name, methods and variables information etc. are stored, including static variables.
+   **1. Method Area:** Class level information like class name, immediate parent class name, methods and variables information etc. are stored, including static variables.
     
-    **2. Heap Area:** Information of all objects is stored in heap area. There is also one Heap Area per JVM. It is also a shared resource.
+   **2. Heap Area:** Information of all objects is stored in heap area. There is also one Heap Area per JVM. It is also a shared resource.
     
-    **3. Stack Area:** For every thread, JVM creates one run-time stack which is stored here. All local variables of that method are stored in their corresponding frame. After a thread terminates, it's run time stack will be terminated by JVM. Is is not a shared Resource.
+   **3. Stack Area:** For every thread, JVM creates one run-time stack which is stored here. All local variables of that method are stored in their corresponding frame. After a thread terminates, it's run time stack will be terminated by JVM. Is is not a shared Resource.
     
-    **4. PC Registers:** Stores address of the currently executing instruction. Each thread has seperate PC Registers.
+   **4. PC Registers:** Stores address of the currently executing instruction. Each thread has seperate PC Registers.
     
-    **5. Native Method Stacks:** For every thread, separate native stack is created. It stores native method information.
+   **5. Native Method Stacks:** For every thread, separate native stack is created. It stores native method information.
     
 >**Execution Engine:** It executes the .class file(bytecode) into machine code. It can be classified into 3 types:
   
-    **1. Interpreter:** Line by Line interpretition of the bytecode.
+   **1. Interpreter:** Line by Line interpretition of the bytecode.
     
-    **2. JIT:** Optimizes and Compiles the entire bytecode so reusability happens.
+   **2. JIT:** Optimizes and Compiles the entire bytecode so reusability happens.
     
-    **3. Garbage Collection:** It destroy un-referenced objects.
+   **3. Garbage Collection:** It destroy un-referenced objects.
     
 >**JNI:** It enables JVM to call C/C++ libraries and to be called by C/C++ libraries which may be specific to hardware.
   
